@@ -30,9 +30,8 @@ class ListAppPresenterImpl implements ListAppContract.ListAppPresenter {
 	public void start() {
 		mView.setPresenter(this);
 		mView.startLoading();
-		if (from == null)
+		if (from == null) {
 			mRepository.getInstalledApps(mActivity).done(mView::loadFinish);
-		else
-			mRepository.getStorageApps(mActivity, from).done(mView::loadFinish);
+		}
 	}
 }

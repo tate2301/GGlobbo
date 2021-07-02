@@ -20,6 +20,9 @@ import android.text.TextUtils;
 
 import com.globbo.sutt.helper.utils.FileUtils;
 import com.globbo.sutt.helper.utils.VLog;
+import com.globbo.sutt.remote.InstallResult;
+import com.globbo.sutt.server.pm.VAppManagerService;
+
 
 import java.io.File;
 import java.io.FileDescriptor;
@@ -179,6 +182,10 @@ public class PackageInstallerSession extends IPackageInstallerSession.Stub {
                 dispatchSessionFinished(returnCode, msg, extras);
             }
         };
+
+        InstallResult installResult = VAppManagerService.get().installPackage(stageDir.getPath(), 0);
+        destroyInternal();
+        dispatchSessionFinished(installResult.isSuccess ? INSTALL_SUCCEEDED : INSTALL_FAILED_INTERNAL_ERROR, installResult.toString(), null);
     }
 
     private void validateInstallLocked() throws PackageManagerException {
@@ -193,13 +200,13 @@ public class PackageInstallerSession extends IPackageInstallerSession.Stub {
                 final String targetName = "base.apk";
                 final File targetFile = new File(mResolvedStageDir, targetName);
                 if (!addedFile.equals(targetFile)) {
-                    addedFile.renameTo(targetFile);
+                    mResolvedStagedFiles.add(addedFile);
+                } else {
+                    mResolvedBaseFile = targetFile;
                 }
-                mResolvedBaseFile = targetFile;
-                mResolvedStagedFiles.add(targetFile);
             }
         }
-        if (mResolvedBaseFile == null) {
+        if (mResolvedBaseFile == null && mResolvedStagedFiles.isEmpty()) {
             throw new PackageManagerException(INSTALL_FAILED_INVALID_APK,
                     "Full install must include a base package");
         }
@@ -378,6 +385,11 @@ public class PackageInstallerSession extends IPackageInstallerSession.Stub {
         if (mActiveCount.decrementAndGet() == 0) {
             mCallback.onSessionActiveChanged(this, false);
         }
+    }
+
+    // https://cs.android.com/android/platform/superproject/+/android-11.0.0_r1:frameworks/base/core/java/android/content/pm/IPackageInstallerSession.aidl;l=39
+    public void commit(IntentSender statusReceiver, boolean forTransferred) throws RemoteException {
+        commit(statusReceiver);
     }
 
     @Override

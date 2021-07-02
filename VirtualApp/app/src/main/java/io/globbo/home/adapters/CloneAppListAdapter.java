@@ -83,7 +83,7 @@ public class CloneAppListAdapter extends DragSelectRecyclerViewAdapter<CloneAppL
             GlideUtils.loadPackageIconFromApkFile(mContext, info.path, holder.iconView, android.R.drawable.sym_def_app_icon);
         }
 
-        holder.nameView.setText(String.format("%s: %s", info.name, info.version));
+        holder.nameView.setText(String.format("%s: %s%s", info.name, info.version, info.splitApk ? " [S]" : ""));
         if (isIndexSelected(position)) {
             holder.iconView.setAlpha(1f);
             holder.appCheckView.setImageResource(R.drawable.ic_check);
@@ -98,16 +98,9 @@ public class CloneAppListAdapter extends DragSelectRecyclerViewAdapter<CloneAppL
             holder.labelView.setVisibility(View.INVISIBLE);
         }
 
-        if (info.path == null) {
-            holder.summaryView.setVisibility(View.GONE);
-        } else {
-            holder.summaryView.setVisibility(View.VISIBLE);
-            holder.summaryView.setText(info.path);
-        }
         holder.itemView.setOnClickListener(v -> {
             mItemEventListener.onItemClick(info, position);
         });
-        holder.itemView.setEnabled(info.is64bit);
     }
 
     @Override
@@ -149,7 +142,6 @@ public class CloneAppListAdapter extends DragSelectRecyclerViewAdapter<CloneAppL
         private TextView nameView;
         private ImageView appCheckView;
         private LabelView labelView;
-        private TextView summaryView;
 
         ViewHolder(View itemView) {
             super(itemView);
@@ -158,7 +150,6 @@ public class CloneAppListAdapter extends DragSelectRecyclerViewAdapter<CloneAppL
                 nameView = (TextView) itemView.findViewById(R.id.item_app_name);
                 appCheckView = (ImageView) itemView.findViewById(R.id.item_app_checked);
                 labelView = (LabelView) itemView.findViewById(R.id.item_app_clone_count);
-                summaryView = (TextView) itemView.findViewById(R.id.item_app_summary);
             }
         }
     }

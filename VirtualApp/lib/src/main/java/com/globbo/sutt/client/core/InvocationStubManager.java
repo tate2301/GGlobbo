@@ -1,4 +1,4 @@
-package com.globbo.sutt.client.core;
+package com.lody.virtual.client.core;
 
 import android.os.Build;
 
@@ -56,6 +56,8 @@ import com.globbo.sutt.client.hook.proxies.wifi_scanner.WifiScannerStub;
 import com.globbo.sutt.client.hook.proxies.window.WindowManagerStub;
 import com.globbo.sutt.client.interfaces.IInjector;
 import com.globbo.sutt.helper.compat.BuildCompat;
+import com.globbo.sutt.client.hook.proxies.battery.BatteryStatsStub;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -186,6 +188,8 @@ public final class InvocationStubManager {
                 addInjector(new WifiScannerStub());
                 addInjector(new ShortcutServiceStub());
                 addInjector(new DevicePolicyManagerStub());
+
+                addInjector(new BatteryStatsStub());
             }
             if (BuildCompat.isOreo()) {
 				addInjector(new AutoFillManagerStub());

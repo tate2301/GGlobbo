@@ -35,7 +35,6 @@ public class NativeEngine {
 
     private static final String LIB_NAME = "va++";
 
-
     static {
         try {
             System.loadLibrary(LIB_NAME);

@@ -10,6 +10,7 @@ import com.globbo.sutt.client.ipc.VirtualLocationManager;
 import com.globbo.sutt.helper.utils.ArrayUtils;
 import com.globbo.sutt.helper.utils.Reflect;
 import com.globbo.sutt.remote.vloc.VLocation;
+import com.globbo.sutt.client.hook.utils.MethodParameterUtils;
 
 import java.lang.reflect.Method;
 import java.util.Arrays;
@@ -254,6 +255,7 @@ public class MethodProxies {
 
         @Override
         public Object call(Object who, Method method, Object... args) throws Throwable {
+            MethodParameterUtils.replaceFirstAppPkg(args);
             if (!isFakeLocationEnable()) {
                 return super.call(who, method, args);
             }

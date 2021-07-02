@@ -1,4 +1,4 @@
-package io.globbo.dev;
+package io.virtualapp.dev;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -20,7 +20,7 @@ import io.globbo.home.LoadingActivity;
 
 public class CmdReceiver extends BroadcastReceiver {
 
-    private static final String ACTION = "io.va.exposed.CMD";
+    private static final String ACTION = BuildConfig.APPLICATION_ID + ".CMD";
     private static final String KEY_CMD = "cmd";
     private static final String KEY_PKG = "pkg";
     private static final String KEY_UID = "uid";
