@@ -10,7 +10,7 @@
         android:layout_gravity="top|end"
         android:src="@drawable/ic_no_check" />
 
-    <io.virtualapp.widgets.LabelView xmlns:lv="http://schemas.android.com/apk/res-auto"
+    <io.globbo.widgets.LabelView xmlns:lv="http://schemas.android.com/apk/res-auto"
         android:id="@+id/item_app_clone_count"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -46,7 +46,7 @@
             android:orientation="vertical"
             android:paddingLeft="10dp">
 
-            <io.virtualapp.widgets.MarqueeTextView
+            <io.globbo.widgets.MarqueeTextView
                 android:id="@+id/item_app_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -58,7 +58,7 @@
                 android:textColor="@color/desktopColorB"
                 android:textSize="14sp" />
 
-            <io.virtualapp.widgets.MarqueeTextView
+            <io.globbo.widgets.MarqueeTextView
                 android:id="@+id/item_app_summary"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

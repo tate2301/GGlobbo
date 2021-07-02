@@ -1,8 +1,8 @@
-package io.virtualapp.delegate;
+package io.globbo.delegate;
 
 import android.app.Application;
 
-import com.lody.virtual.client.core.VirtualCore;
+import com.globbo.sutt.client.core.VirtualCore;
 
 /**
  * @author weishu

@@ -13,12 +13,12 @@ import android.os.IBinder;
 import android.util.Log;
 import android.util.MergedConfiguration;
 
-import com.lody.virtual.client.VClientImpl;
-import com.lody.virtual.client.core.VirtualCore;
-import com.lody.virtual.client.ipc.VActivityManager;
-import com.lody.virtual.helper.utils.ComponentUtils;
-import com.lody.virtual.remote.InstalledAppInfo;
-import com.lody.virtual.remote.StubActivityRecord;
+import com.globbo.sutt.client.VClientImpl;
+import com.globbo.sutt.client.core.VirtualCore;
+import com.globbo.sutt.client.ipc.VActivityManager;
+import com.globbo.sutt.helper.utils.ComponentUtils;
+import com.globbo.sutt.remote.InstalledAppInfo;
+import com.globbo.sutt.remote.StubActivityRecord;
 
 import java.util.List;
 import java.util.Map;

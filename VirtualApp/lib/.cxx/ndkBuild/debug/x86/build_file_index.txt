@@ -1,0 +1,2 @@
+C:\Users\user\work\virt\VirtualApp\lib\src\main\jni\Android.mk
+C:\Users\user\work\virt\VirtualApp\lib\src\main\jni\Application.mk

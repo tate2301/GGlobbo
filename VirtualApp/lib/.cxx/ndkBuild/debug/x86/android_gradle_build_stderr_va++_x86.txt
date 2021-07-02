@@ -1,0 +1,5 @@
+C:/Users/user/work/virt/VirtualApp/lib/src/main/jni/Foundation/IOUniformer.cpp:131:23: error: use of undeclared identifier '__NR_newfstatat'
+    int ret = syscall(__NR_newfstatat, dirfd, redirect_path, buf, flags);
+                      ^
+1 error generated.
+make: *** [C:/Users/user/AppData/Local/Android/Sdk/ndk/21.4.7075529/build//../build/core/build-binary.mk:478: C:/Users/user/work/virt/VirtualApp/lib/build/intermediates/ndkBuild/debug/obj/local/x86/objs/va++/Foundation/IOUniformer.o] Error 1
