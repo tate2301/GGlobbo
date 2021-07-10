@@ -1,0 +1,58 @@
+C:/Users/user/work/virt/VirtualApp/lib/src/main/jni/Foundation/fake_dlfcn.cpp:37:9: warning: 'log_info' macro redefined [-Wmacro-redefined]
+#define log_info(...)
+        ^
+C:/Users/user/work/virt/VirtualApp/lib/src/main/jni/Foundation/fake_dlfcn.cpp:30:9: note: previous definition is here
+#define log_info(fmt,args...) __android_log_print(ANDROID_LOG_INFO, TAG_NAME, (const char *) fmt, ##args)
+        ^
+1 warning generated.
+In file included from C:/Users/user/work/virt/VirtualApp/lib/src/main/jni/Substrate/SubstrateHook.cpp:706:
+C:/Users/user/work/virt/VirtualApp/lib/src/main/jni/Substrate/SubstrateX86.hpp:106:45: warning: '&' within '|' [-Wbitwise-op-parentheses]
+    MSWrite<uint8_t>(current, 0xd0 | target & 0x07);
+                                   ~ ~~~~~~~^~~~~~
+C:/Users/user/work/virt/VirtualApp/lib/src/main/jni/Substrate/SubstrateX86.hpp:106:45: note: place parentheses around the '&' expression to silence this warning
+    MSWrite<uint8_t>(current, 0xd0 | target & 0x07);
+                                            ^
+                                     (            )
+C:/Users/user/work/virt/VirtualApp/lib/src/main/jni/Substrate/SubstrateX86.hpp:154:45: warning: '&' within '|' [-Wbitwise-op-parentheses]
+    MSWrite<uint8_t>(current, 0xe0 | target & 0x07);
+                                   ~ ~~~~~~~^~~~~~
+C:/Users/user/work/virt/VirtualApp/lib/src/main/jni/Substrate/SubstrateX86.hpp:154:45: note: place parentheses around the '&' expression to silence this warning
+    MSWrite<uint8_t>(current, 0xe0 | target & 0x07);
+                                            ^
+                                     (            )
+C:/Users/user/work/virt/VirtualApp/lib/src/main/jni/Substrate/SubstrateX86.hpp:160:45: warning: '&' within '|' [-Wbitwise-op-parentheses]
+    MSWrite<uint8_t>(current, 0x58 | target & 0x07);
+                                   ~ ~~~~~~~^~~~~~
+C:/Users/user/work/virt/VirtualApp/lib/src/main/jni/Substrate/SubstrateX86.hpp:160:45: note: place parentheses around the '&' expression to silence this warning
+    MSWrite<uint8_t>(current, 0x58 | target & 0x07);
+                                            ^
+                                     (            )
+C:/Users/user/work/virt/VirtualApp/lib/src/main/jni/Substrate/SubstrateX86.hpp:170:45: warning: '&' within '|' [-Wbitwise-op-parentheses]
+    MSWrite<uint8_t>(current, 0x50 | target & 0x07);
+                                   ~ ~~~~~~~^~~~~~
+C:/Users/user/work/virt/VirtualApp/lib/src/main/jni/Substrate/SubstrateX86.hpp:170:45: note: place parentheses around the '&' expression to silence this warning
+    MSWrite<uint8_t>(current, 0x50 | target & 0x07);
+                                            ^
+                                     (            )
+C:/Users/user/work/virt/VirtualApp/lib/src/main/jni/Substrate/SubstrateX86.hpp:175:45: warning: '&' within '|' [-Wbitwise-op-parentheses]
+    MSWrite<uint8_t>(current, 0xc4 | target & 0x07);
+                                   ~ ~~~~~~~^~~~~~
+C:/Users/user/work/virt/VirtualApp/lib/src/main/jni/Substrate/SubstrateX86.hpp:175:45: note: place parentheses around the '&' expression to silence this warning
+    MSWrite<uint8_t>(current, 0xc4 | target & 0x07);
+                                            ^
+                                     (            )
+C:/Users/user/work/virt/VirtualApp/lib/src/main/jni/Substrate/SubstrateX86.hpp:181:45: warning: '&' within '|' [-Wbitwise-op-parentheses]
+    MSWrite<uint8_t>(current, 0xb8 | target & 0x7);
+                                   ~ ~~~~~~~^~~~~
+C:/Users/user/work/virt/VirtualApp/lib/src/main/jni/Substrate/SubstrateX86.hpp:181:45: note: place parentheses around the '&' expression to silence this warning
+    MSWrite<uint8_t>(current, 0xb8 | target & 0x7);
+                                            ^
+                                     (           )
+C:/Users/user/work/virt/VirtualApp/lib/src/main/jni/Substrate/SubstrateX86.hpp:193:61: warning: '&' within '|' [-Wbitwise-op-parentheses]
+    MSWrite<uint8_t>(current, (target & 0x07) << 3 | source & 0x07);
+                                                   ~ ~~~~~~~^~~~~~
+C:/Users/user/work/virt/VirtualApp/lib/src/main/jni/Substrate/SubstrateX86.hpp:193:61: note: place parentheses around the '&' expression to silence this warning
+    MSWrite<uint8_t>(current, (target & 0x07) << 3 | source & 0x07);
+                                                            ^
+                                                     (            )
+7 warnings generated.

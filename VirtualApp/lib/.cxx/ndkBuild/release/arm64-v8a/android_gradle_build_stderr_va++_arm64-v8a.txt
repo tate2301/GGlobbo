@@ -1,0 +1,7 @@
+C:/Users/user/work/virt/VirtualApp/lib/src/main/jni/Foundation/fake_dlfcn.cpp:37:9: warning: 'log_info' macro redefined [-Wmacro-redefined]
+#define log_info(...)
+        ^
+C:/Users/user/work/virt/VirtualApp/lib/src/main/jni/Foundation/fake_dlfcn.cpp:30:9: note: previous definition is here
+#define log_info(fmt,args...) __android_log_print(ANDROID_LOG_INFO, TAG_NAME, (const char *) fmt, ##args)
+        ^
+1 warning generated.
