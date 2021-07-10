@@ -1,4 +1,4 @@
-package io.virtualapp.home.adapters;
+package io.globbo.home.adapters;
 
 import android.content.Context;
 import android.os.Build;

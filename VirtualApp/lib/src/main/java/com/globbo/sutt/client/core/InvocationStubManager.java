@@ -1,4 +1,4 @@
-package com.lody.virtual.client.core;
+package com.globbo.sutt.client.core;
 
 import android.os.Build;
 

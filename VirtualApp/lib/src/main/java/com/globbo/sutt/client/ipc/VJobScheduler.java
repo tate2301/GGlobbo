@@ -9,7 +9,7 @@ import android.os.RemoteException;
 
 import com.globbo.sutt.client.core.VirtualCore;
 import com.globbo.sutt.client.env.VirtualRuntime;
-import com.globbo.sutt.server.IJobScheduler;
+import com.globbo.sutt.server.IIJobScheduler;
 
 import java.util.List;
 
@@ -21,18 +21,18 @@ public class VJobScheduler {
 
     private static final VJobScheduler sInstance = new VJobScheduler();
 
-    private IJobScheduler mRemote;
+    private IIJobScheduler mRemote;
 
     public static VJobScheduler get() {
         return sInstance;
     }
 
-    public IJobScheduler getRemote() {
+    public IIJobScheduler getRemote() {
         if (mRemote == null ||
                 (!mRemote.asBinder().pingBinder() && !VirtualCore.get().isVAppProcess())) {
             synchronized (this) {
                 Object remote = getRemoteInterface();
-                mRemote = LocalProxyUtils.genProxy(IJobScheduler.class, remote);
+                mRemote = LocalProxyUtils.genProxy(IIJobScheduler.class, remote);
             }
         }
         return mRemote;
@@ -40,7 +40,7 @@ public class VJobScheduler {
 
     private Object getRemoteInterface() {
         final IBinder binder = ServiceManagerNative.getService(ServiceManagerNative.JOB);
-        return IJobScheduler.Stub.asInterface(binder);
+        return IIJobScheduler.Stub.asInterface(binder);
     }
 
     public int schedule(JobInfo job) {

@@ -1,11 +1,11 @@
-package com.lody.virtual.client.hook.proxies.battery;
+package com.globbo.sutt.client.hook.proxies.battery;
 
 import android.content.Context;
 import android.os.IInterface;
 
-import com.lody.virtual.client.core.VirtualCore;
-import com.lody.virtual.client.hook.base.BinderInvocationProxy;
-import com.lody.virtual.client.hook.base.ReplaceLastUidMethodProxy;
+import com.globbo.sutt.client.core.VirtualCore;
+import com.globbo.sutt.client.hook.base.BinderInvocationProxy;
+import com.globbo.sutt.client.hook.base.ReplaceLastUidMethodProxy;
 
 import mirror.com.android.internal.os.health.SystemHealthManager;
 

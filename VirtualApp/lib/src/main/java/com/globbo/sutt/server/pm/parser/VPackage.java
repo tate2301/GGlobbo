@@ -20,7 +20,7 @@ import android.os.Bundle;
 import android.os.Parcel;
 import android.os.Parcelable;
 
-import com.lody.virtual.helper.compat.BuildCompat;
+import com.globbo.sutt.helper.compat.BuildCompat;
 
 import java.util.ArrayList;
 import java.util.HashSet;

@@ -19,7 +19,7 @@ import com.globbo.sutt.client.stub.VASettings;
 import com.globbo.sutt.helper.utils.Singleton;
 import com.globbo.sutt.os.VBinder;
 import com.globbo.sutt.os.VEnvironment;
-import com.globbo.sutt.server.IJobScheduler;
+import com.globbo.sutt.server.IIJobScheduler;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -35,7 +35,7 @@ import java.util.Map;
  * @author Lody
  */
 @TargetApi(Build.VERSION_CODES.LOLLIPOP)
-public class VJobSchedulerService extends IJobScheduler.Stub {
+public class VJobSchedulerService extends IIJobScheduler.Stub {
 
     private static final String TAG = VJobScheduler.class.getSimpleName();
 

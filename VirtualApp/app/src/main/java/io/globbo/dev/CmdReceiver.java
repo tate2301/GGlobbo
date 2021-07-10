@@ -1,4 +1,4 @@
-package io.virtualapp.dev;
+package io.globbo.dev;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -12,6 +12,7 @@ import com.globbo.sutt.client.core.InstallStrategy;
 import com.globbo.sutt.client.core.VirtualCore;
 import com.globbo.sutt.remote.InstallResult;
 
+import io.globbo.BuildConfig;
 import io.globbo.home.LoadingActivity;
 
 /**

@@ -16,11 +16,11 @@ import java.util.List;
 /**
  * IPC interface that supports the app-facing {@link android.app.job.JobScheduler} api.
  */
-public interface IJobScheduler extends android.os.IInterface {
+public interface IIJobScheduler extends android.os.IInterface {
     /**
      * Local-side IPC implementation stub class.
      */
-    public static abstract class Stub extends android.os.Binder implements com.globbo.sutt.server.IJobScheduler {
+    public static abstract class Stub extends android.os.Binder implements IIJobScheduler {
         private static final java.lang.String DESCRIPTOR = "com.globbo.sutt.server.IJobScheduler";
 
         /**
@@ -34,15 +34,15 @@ public interface IJobScheduler extends android.os.IInterface {
          * Cast an IBinder object into an com.globbo.sutt.server.IJobScheduler interface,
          * generating a proxy if needed.
          */
-        public static com.globbo.sutt.server.IJobScheduler asInterface(android.os.IBinder obj) {
+        public static IIJobScheduler asInterface(android.os.IBinder obj) {
             if ((obj == null)) {
                 return null;
             }
             android.os.IInterface iin = obj.queryLocalInterface(DESCRIPTOR);
-            if (((iin != null) && (iin instanceof com.globbo.sutt.server.IJobScheduler))) {
-                return ((com.globbo.sutt.server.IJobScheduler) iin);
+            if (((iin != null) && (iin instanceof IIJobScheduler))) {
+                return ((IIJobScheduler) iin);
             }
-            return new com.globbo.sutt.server.IJobScheduler.Stub.Proxy(obj);
+            return new IIJobScheduler.Stub.Proxy(obj);
         }
 
         @Override
@@ -132,7 +132,7 @@ public interface IJobScheduler extends android.os.IInterface {
             return super.onTransact(code, data, reply, flags);
         }
 
-        private static class Proxy implements com.globbo.sutt.server.IJobScheduler {
+        private static class Proxy implements IIJobScheduler {
             private android.os.IBinder mRemote;
 
             Proxy(android.os.IBinder remote) {

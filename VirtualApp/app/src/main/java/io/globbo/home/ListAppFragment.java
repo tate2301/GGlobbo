@@ -21,7 +21,7 @@ import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
-import com.lody.virtual.helper.compat.NativeLibraryHelperCompat;
+import com.globbo.sutt.helper.compat.NativeLibraryHelperCompat;
 
 import java.io.File;
 import java.util.ArrayList;

@@ -1,4 +1,4 @@
-package io.virtualapp.home.repo;
+package io.globbo.home.repo;
 
 import android.content.Context;
 import android.content.pm.ApplicationInfo;
